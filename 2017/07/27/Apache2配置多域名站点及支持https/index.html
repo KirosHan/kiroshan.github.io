@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Apache," />
 
 
 
@@ -87,13 +87,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Iceagedata">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="0x00 预备条件 申请SSL证书 建立对应站点目录  0x01 配置sites-available文件执行vi /etc/apache2/sites-available/zecoc.conf内容如下：1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950&amp;lt;Virt">
+<meta name="keywords" content="Apache">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Apache2配置多域名站点及支持https">
+<meta property="og:url" content="http://yoursite.com/2017/07/27/Apache2配置多域名站点及支持https/index.html">
 <meta property="og:site_name" content="Iceagedata">
+<meta property="og:description" content="0x00 预备条件 申请SSL证书 建立对应站点目录  0x01 配置sites-available文件执行vi /etc/apache2/sites-available/zecoc.conf内容如下：1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950&amp;lt;Virt">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-07-28T01:04:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Iceagedata">
+<meta name="twitter:title" content="Apache2配置多域名站点及支持https">
+<meta name="twitter:description" content="0x00 预备条件 申请SSL证书 建立对应站点目录  0x01 配置sites-available文件执行vi /etc/apache2/sites-available/zecoc.conf内容如下：1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950&amp;lt;Virt">
 
 
 
@@ -121,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/07/27/Apache2配置多域名站点及支持https/"/>
 
 
 
 
 
-  <title> Iceagedata </title>
+  <title> Apache2配置多域名站点及支持https | Iceagedata </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -152,9 +157,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -267,9 +270,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -299,10 +302,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/07/27/Apache2配置多域名站点及支持https/" itemprop="url">
-                  Apache2配置多域名站点及支持https
-                </a>
+                Apache2配置多域名站点及支持https
               
             
           </h1>
@@ -385,9 +385,7 @@
       
 
       
-        
-          
-            <h1 id="0x00-预备条件"><a href="#0x00-预备条件" class="headerlink" title="0x00 预备条件"></a>0x00 预备条件</h1><ul>
+        <h1 id="0x00-预备条件"><a href="#0x00-预备条件" class="headerlink" title="0x00 预备条件"></a>0x00 预备条件</h1><ul>
 <li>申请SSL证书</li>
 <li>建立对应站点目录</li>
 </ul>
@@ -395,39 +393,50 @@
 <h1 id="0x02-连接sites-enabled文件"><a href="#0x02-连接sites-enabled文件" class="headerlink" title="0x02 连接sites-enabled文件"></a>0x02 连接sites-enabled文件</h1><p>执行<br><code>ln /etc/apache2/sites-available/zecoc.conf /etc/apache2/sites-enabled/zecoc.conf</code></p>
 <h1 id="0x03-重启Apache服务"><a href="#0x03-重启Apache服务" class="headerlink" title="0x03 重启Apache服务"></a>0x03 重启Apache服务</h1><p>执行<code>service apache2 restart</code></p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Apache/" rel="tag"># Apache</a>
+          
+        </div>
+      
+
+      
+        
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
           
           </div>
@@ -435,6 +444,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -454,8 +474,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -565,6 +594,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0x00-预备条件"><span class="nav-number">1.</span> <span class="nav-text">0x00 预备条件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x01-配置sites-available文件"><span class="nav-number">2.</span> <span class="nav-text">0x01 配置sites-available文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x02-连接sites-enabled文件"><span class="nav-number">3.</span> <span class="nav-text">0x02 连接sites-enabled文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x03-重启Apache服务"><span class="nav-number">4.</span> <span class="nav-text">0x03 重启Apache服务</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -669,6 +714,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
@@ -685,9 +734,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'iceagedata';
-      var disqus_identifier = 'index.html';
+      var disqus_identifier = '2017/07/27/Apache2配置多域名站点及支持https/';
 
-      var disqus_title = "";
+      var disqus_title = "Apache2配置多域名站点及支持https";
 
 
       function run_disqus_script(disqus_script) {
@@ -700,6 +749,13 @@
 
       run_disqus_script('count.js');
 
+      
+        var disqus_config = function () {
+            this.page.url = disqus_url;
+            this.page.identifier = disqus_identifier;
+            this.page.title = disqus_title;
+        };
+        run_disqus_script('embed.js');
       
 
     </script>
