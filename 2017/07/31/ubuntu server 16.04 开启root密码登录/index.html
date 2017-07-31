@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Ubuntu," />
 
 
 
@@ -87,13 +87,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Iceagedata">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="0x00 ubuntu server 16.04 开启root密码登录由于众多VPS默认使用证书验证登录，虽然安全但使用十分不便，所以特提供开启root用户并使用密码登录方法。 0x01 为root账户设置密码$ sudo passwd root 0x02 进入root账户$ su root 0x03 编辑sshd_config文件$ vi /etc/ssh/sshd_config做如下修改： 1">
+<meta name="keywords" content="Ubuntu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ubuntu server 16.04 开启root密码登录">
+<meta property="og:url" content="http://yoursite.com/2017/07/31/ubuntu server 16.04 开启root密码登录/index.html">
 <meta property="og:site_name" content="Iceagedata">
+<meta property="og:description" content="0x00 ubuntu server 16.04 开启root密码登录由于众多VPS默认使用证书验证登录，虽然安全但使用十分不便，所以特提供开启root用户并使用密码登录方法。 0x01 为root账户设置密码$ sudo passwd root 0x02 进入root账户$ su root 0x03 编辑sshd_config文件$ vi /etc/ssh/sshd_config做如下修改： 1">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-07-31T08:14:53.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Iceagedata">
+<meta name="twitter:title" content="ubuntu server 16.04 开启root密码登录">
+<meta name="twitter:description" content="0x00 ubuntu server 16.04 开启root密码登录由于众多VPS默认使用证书验证登录，虽然安全但使用十分不便，所以特提供开启root用户并使用密码登录方法。 0x01 为root账户设置密码$ sudo passwd root 0x02 进入root账户$ su root 0x03 编辑sshd_config文件$ vi /etc/ssh/sshd_config做如下修改： 1">
 
 
 
@@ -121,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/07/31/ubuntu server 16.04 开启root密码登录/"/>
 
 
 
 
 
-  <title> Iceagedata </title>
+  <title> ubuntu server 16.04 开启root密码登录 | Iceagedata </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -152,9 +157,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div id="kiros-canvas" style="position:absolute;top:0;">
     <div class="headband"></div>
 
@@ -268,9 +271,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -300,10 +303,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/07/31/ubuntu server 16.04 开启root密码登录/" itemprop="url">
-                  ubuntu server 16.04 开启root密码登录
-                </a>
+                ubuntu server 16.04 开启root密码登录
               
             
           </h1>
@@ -386,213 +386,75 @@
       
 
       
-        
-          
-          0x00 ubuntu server 16.04 开启root密码登录由于众多VPS默认使用证书验证登录，虽然安全但使用十分不便，所以特提供开启root用户并使用密码登录方法。
-0x01 为root账户设置密码$ sudo passwd root
-0x02 进入root账户$ su root
-0x0
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/07/31/ubuntu server 16.04 开启root密码登录/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <h1 id="0x00-ubuntu-server-16-04-开启root密码登录"><a href="#0x00-ubuntu-server-16-04-开启root密码登录" class="headerlink" title="0x00 ubuntu server 16.04 开启root密码登录"></a>0x00 ubuntu server 16.04 开启root密码登录</h1><p>由于众多VPS默认使用证书验证登录，虽然安全但使用十分不便，所以特提供开启root用户并使用密码登录方法。</p>
+<h1 id="0x01-为root账户设置密码"><a href="#0x01-为root账户设置密码" class="headerlink" title="0x01 为root账户设置密码"></a>0x01 为root账户设置密码</h1><p><code>$ sudo passwd root</code></p>
+<h1 id="0x02-进入root账户"><a href="#0x02-进入root账户" class="headerlink" title="0x02 进入root账户"></a>0x02 进入root账户</h1><p><code>$ su root</code></p>
+<h1 id="0x03-编辑sshd-config文件"><a href="#0x03-编辑sshd-config文件" class="headerlink" title="0x03 编辑sshd_config文件"></a>0x03 编辑sshd_config文件</h1><p><code>$ vi /etc/ssh/sshd_config</code><br>做如下修改：</p>
+<p>1.允许root账户登录<br><code>PermitRootLogin without-password</code><br>~修改为~<br><code>PermitRootLogin yes</code></p>
+<p>2.允许密码登录<br><code>PasswordAuthentication no</code><br>~修改为~<br><code>PasswordAuthentication yes</code></p>
+<p>3.关闭证书验证登录(::确认可以使用密码登录后再做此修改，避免发生无法登录服务器的验证后果::)<br><code>UsePAM yes</code><br>~修改为~<br><code>UsePAM no</code></p>
+<h1 id="0x04-重启sshd服务"><a href="#0x04-重启sshd服务" class="headerlink" title="0x04 重启sshd服务"></a>0x04 重启sshd服务</h1><p><code>$ sudo service ssh restart</code></p>
+
       
     </div>
 
     <div>
       
+        
+
+      
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/27/Apache2配置多域名站点及支持https/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Kiros">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Iceagedata">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/07/27/Apache2配置多域名站点及支持https/" itemprop="url">
-                  Apache2配置多域名站点及支持https
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-27T12:46:25+08:00">
-                2017-07-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Apache/" itemprop="url" rel="index">
-                    <span itemprop="name">Apache</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/Ubuntu/" rel="tag"># Ubuntu</a>
           
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/07/27/Apache2配置多域名站点及支持https/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/07/27/Apache2配置多域名站点及支持https/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
         
-          
-          0x00 预备条件
-申请SSL证书
-建立对应站点目录
-开放443端口
+      
 
-0x01 配置sites-available文件执行vi /etc/apache2/sites-available/zecoc.conf内容如下：12345678910111213141516171819202122232425
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/07/27/Apache2配置多域名站点及支持https/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/27/Apache2配置多域名站点及支持https/" rel="next" title="Apache2配置多域名站点及支持https">
+                <i class="fa fa-chevron-left"></i> Apache2配置多域名站点及支持https
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
 
-    <div>
-      
-    </div>
+          <span class="post-nav-divider"></span>
 
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -600,6 +462,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -619,8 +492,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -730,6 +612,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0x00-ubuntu-server-16-04-开启root密码登录"><span class="nav-number">1.</span> <span class="nav-text">0x00 ubuntu server 16.04 开启root密码登录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x01-为root账户设置密码"><span class="nav-number">2.</span> <span class="nav-text">0x01 为root账户设置密码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x02-进入root账户"><span class="nav-number">3.</span> <span class="nav-text">0x02 进入root账户</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x03-编辑sshd-config文件"><span class="nav-number">4.</span> <span class="nav-text">0x03 编辑sshd_config文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x04-重启sshd服务"><span class="nav-number">5.</span> <span class="nav-text">0x04 重启sshd服务</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -835,6 +733,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
@@ -851,9 +753,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'iceagedata';
-      var disqus_identifier = 'index.html';
+      var disqus_identifier = '2017/07/31/ubuntu server 16.04 开启root密码登录/';
 
-      var disqus_title = "";
+      var disqus_title = "ubuntu server 16.04 开启root密码登录";
 
 
       function run_disqus_script(disqus_script) {
@@ -866,6 +768,13 @@
 
       run_disqus_script('count.js');
 
+      
+        var disqus_config = function () {
+            this.page.url = disqus_url;
+            this.page.identifier = disqus_identifier;
+            this.page.title = disqus_title;
+        };
+        run_disqus_script('embed.js');
       
 
     </script>
