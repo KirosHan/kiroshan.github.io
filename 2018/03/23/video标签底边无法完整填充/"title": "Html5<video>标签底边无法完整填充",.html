@@ -1,0 +1,4 @@
+<p>“title”: “Html5<video>标签底边无法完整填充”,<br>“date”: “2018/3/23 22:01:08”,<br>“tags”:”Html”,<br>“categories”:”Html”<br>;;;</p>
+<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>使用video标签时，视频无法完整填充父级容器，底部留有空边。这是我使用视频当做背景时遇到的问题，无论设置自适应和百分比均无法解决。</p>
+<h1 id="原因解析"><a href="#原因解析" class="headerlink" title="原因解析"></a>原因解析</h1><p>该bug疑与父元素样式background属性有关，详细原因未知</p>
+<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>1.父元素加上 <code>font-size:0;</code><br>2.父元素去掉<code>background/background-color</code>属性<br>3.<video>加上<code>display:block;</code></p>
